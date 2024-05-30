@@ -1,4 +1,4 @@
-main: React CI/CD Testing
+name: React CI/CD Testing
 
 on: push
 
@@ -22,4 +22,7 @@ jobs:
                   echo "NPM Version: $(npm --version)"
                   echo "Working Directory: $(pwd)"
                   echo "Contents of Working Directory: $(ls -l)"
-                  echo 'Content of node_modules: $(ls -l node_modules)'
+                  echo "Content of node_modules: $(ls -l node_modules)"
+
+            - name: Run Tests
+              run: npm test
